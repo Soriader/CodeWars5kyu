@@ -10,6 +10,14 @@ namespace UdemyTest
             class Test
             {
                 [Test]
+                public void MaximumSubarraySumTest()
+                {
+                    Assert.AreEqual(0, MaximumSubarraySumTask.MaxSequence(new int[0]));
+                    Assert.AreEqual(6, MaximumSubarraySumTask.MaxSequence(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+
+                }
+
+                [Test]
                 public void PrimesInNumbersTest()
                 {
                     Assert.AreEqual("(2**2)(3**3)(5)(7)(11**2)(17)", PrimesInNumbersTask.Factors(7775460));
