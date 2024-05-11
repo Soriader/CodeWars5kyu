@@ -10,6 +10,16 @@ namespace UdemyTest
             class Test
             {
                 [Test]
+                public void IntegersRecreationOneTest()
+                {
+                    Assert.AreEqual("[[1, 1], [42, 2500], [246, 84100]]", IntegersRecreationOneTask.ListSquared(1, 250));
+                    Assert.AreEqual("[[287, 84100]]", IntegersRecreationOneTask.ListSquared(250, 500));
+                    Assert.AreEqual("[[42, 2500], [246, 84100]]", IntegersRecreationOneTask.ListSquared(42, 250));
+
+
+                }
+
+                [Test]
                 public void MaximumSubarraySumTest()
                 {
                     Assert.AreEqual(0, MaximumSubarraySumTask.MaxSequence(new int[0]));
