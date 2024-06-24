@@ -10,6 +10,15 @@ namespace UdemyTest
             class Test
             {
                 [Test]
+                public static void FactorialDecompositionTest()
+                {
+                    Assert.AreEqual("2^15 * 3^6 * 5^3 * 7^2 * 11 * 13 * 17", FactorialDecompositionTask.Decomp(17));
+                    Assert.AreEqual("2^19 * 3^9 * 5^4 * 7^3 * 11^2 * 13 * 17 * 19", FactorialDecompositionTask.Decomp(22));
+                    Assert.AreEqual("2^11 * 3^5 * 5^2 * 7^2 * 11 * 13", FactorialDecompositionTask.Decomp(14));
+
+                }
+
+                [Test]
                 public void IntegersRecreationOneTest()
                 {
                     Assert.AreEqual("[[1, 1], [42, 2500], [246, 84100]]", IntegersRecreationOneTask.ListSquared(1, 250));
