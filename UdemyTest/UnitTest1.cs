@@ -10,6 +10,15 @@ namespace UdemyTest
             class Test
             {
                 [Test]
+                public void CommonDenominatorsTest()
+                {
+
+                    long[,] lst = new long[,] { { 1, 2 }, { 1, 3 }, { 1, 4 } };
+                    Assert.AreEqual("(6,12)(4,12)(3,12)", CommonDenominatorsTask.ConvertFrac(lst));
+
+                }
+
+                [Test]
                 public static void FactorialDecompositionTest()
                 {
                     Assert.AreEqual("2^15 * 3^6 * 5^3 * 7^2 * 11 * 13 * 17", FactorialDecompositionTask.Decomp(17));
