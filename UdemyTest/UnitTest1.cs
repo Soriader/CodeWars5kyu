@@ -9,7 +9,19 @@ namespace UdemyTest
         {
             class Test
             {
-                [Test]
+				[Test]
+				public void WhatIsAPerfectPowerAnywayTest()
+				{
+					Assert.IsNull(WhatIsAPerfectPowerAnywayTask.IsPerfectPower(5), "5 is not a perfect power");
+					Assert.IsNull(WhatIsAPerfectPowerAnywayTask.IsPerfectPower(0), "0 is not a perfect number");
+					Assert.IsNull(WhatIsAPerfectPowerAnywayTask.IsPerfectPower(1), "1 is not a perfect number");
+					Assert.AreEqual((2, 2), WhatIsAPerfectPowerAnywayTask.IsPerfectPower(4), "4 = 2^2");
+					Assert.AreEqual((2, 3), WhatIsAPerfectPowerAnywayTask.IsPerfectPower(8), "8 = 2^3");
+					Assert.AreEqual((3, 2), WhatIsAPerfectPowerAnywayTask.IsPerfectPower(9), "9 = 3^2");
+
+				}
+
+				[Test]
                 public void CommonDenominatorsTest()
                 {
 
