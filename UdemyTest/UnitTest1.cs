@@ -10,6 +10,19 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void LandPerimeterTest()
+				{
+					Assert.AreEqual("Total land perimeter: 0", LandPerimeterTask.Calculate("".Split(' ')), "Sample test 1");
+					Assert.AreEqual("Total land perimeter: 0", LandPerimeterTask.Calculate("O".Split(' ')), "Sample test 2");
+					Assert.AreEqual("Total land perimeter: 4", LandPerimeterTask.Calculate("X".Split(' ')), "Sample test 3");
+					Assert.AreEqual("Total land perimeter: 60", LandPerimeterTask.Calculate("OXOOOX OXOXOO XXOOOX OXXXOO OOXOOX OXOOOO OOXOOX OOXOOO OXOOOO OXOOXX".Split(' ')), "Sample test 4");
+					Assert.AreEqual("Total land perimeter: 52", LandPerimeterTask.Calculate("OXOOO OOXXX OXXOO XOOOO XOOOO XXXOO XOXOO OOOXO OXOOX XOOOO OOOXO".Split(' ')), "Sample test 5");
+					Assert.AreEqual("Total land perimeter: 40", LandPerimeterTask.Calculate("XXXXXOOO OOXOOOOO OOOOOOXO XXXOOOXO OXOXXOOX".Split(' ')), "Sample test 6");
+					Assert.AreEqual("Total land perimeter: 54", LandPerimeterTask.Calculate("XOOOXOO OXOOOOO XOXOXOO OXOXXOO OOOOOXX OOOXOXX XXXXOXO".Split(' ')), "Sample test 7");
+					Assert.AreEqual("Total land perimeter: 40", LandPerimeterTask.Calculate("OOOOXO XOXOOX XXOXOX XOXOOO OOOOOO OOOXOO OOXXOO".Split(' ')), "Sample test 8");
+
+				}
+				[Test]
 				public static void PhoneDirectoryTest()
 				{
 					string dr = "/+1-541-754-3010 156 Alphand_St. <J Steeve>\n 133, Green, Rd. <E Kustur> NY-56423 ;+1-541-914-3010\n"
