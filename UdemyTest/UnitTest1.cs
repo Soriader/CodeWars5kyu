@@ -10,6 +10,17 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public static void GapInPrimesTest()
+				{
+					Assert.AreEqual(new long[] { 101, 103 }, GapInPrimesTask.Gap(2, 100, 110));
+					Assert.AreEqual(new long[] { 103, 107 }, GapInPrimesTask.Gap(4, 100, 110));
+					Assert.AreEqual(new long[] { 101, 103 }, GapInPrimesTask.Gap(2, 100, 103));
+					Assert.AreEqual(null, GapInPrimesTask.Gap(6, 100, 110));
+					Assert.AreEqual(new long[] { 359, 367 }, GapInPrimesTask.Gap(8, 300, 400));
+					Assert.AreEqual(new long[] { 337, 347 }, GapInPrimesTask.Gap(10, 300, 400));
+				}
+
+				[Test]
 				public void LandPerimeterTest()
 				{
 					Assert.AreEqual("Total land perimeter: 0", LandPerimeterTask.Calculate("".Split(' ')), "Sample test 1");
