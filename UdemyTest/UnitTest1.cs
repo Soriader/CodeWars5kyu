@@ -10,6 +10,23 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void WriteOutNumbersTest()
+				{
+
+					Assert.AreEqual("zero", WriteOutNumbersTask.Number2Words(0));
+					Assert.AreEqual("one", WriteOutNumbersTask.Number2Words(1));
+					Assert.AreEqual("three", WriteOutNumbersTask.Number2Words(3));
+					Assert.AreEqual("five", WriteOutNumbersTask.Number2Words(5));
+					Assert.AreEqual("eight", WriteOutNumbersTask.Number2Words(8));
+					Assert.AreEqual("three hundred one", WriteOutNumbersTask.Number2Words(301));
+					Assert.AreEqual("seven hundred ninety-three", WriteOutNumbersTask.Number2Words(793));
+					Assert.AreEqual("eight hundred", WriteOutNumbersTask.Number2Words(800));
+					Assert.AreEqual("six hundred fifty", WriteOutNumbersTask.Number2Words(650));
+					Assert.AreEqual("one thousand", WriteOutNumbersTask.Number2Words(1000));
+					Assert.AreEqual("one thousand three", WriteOutNumbersTask.Number2Words(1003));
+				}
+
+				[Test]
 				public static void GapInPrimesTest()
 				{
 					Assert.AreEqual(new long[] { 101, 103 }, GapInPrimesTask.Gap(2, 100, 110));
