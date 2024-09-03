@@ -10,6 +10,22 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void TheHungerGamesZooDisasterTest()
+				{
+					string input = "fox,bug,chicken,grass,sheep";
+					string[] expected = {
+		  "fox,bug,chicken,grass,sheep",
+		  "chicken eats bug",
+		  "fox eats chicken",
+		  "sheep eats grass",
+		  "fox eats sheep",
+		  "fox"
+		};
+
+					Assert.AreEqual(expected, TheHungerGamesZooDisasterTask.WhoEatsWho(input));
+				}
+
+				[Test]
 				public void WriteOutNumbersTest()
 				{
 
