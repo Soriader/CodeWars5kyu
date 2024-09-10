@@ -11,6 +11,14 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void DirectionsReductionTest()
+				{
+					string[] a = new string[] { "NORTH", "WEST", "SOUTH", "EAST" };
+					string[] b = new string[] { "NORTH", "WEST", "SOUTH", "EAST" };
+					Assert.AreEqual(b, DirectionsReductionTask.DirReduc(a));
+				}
+
+			    [Test]
 				public void ClosestAndSmallestTest()
 				{
 					CollectionAssert.AreEqual(
