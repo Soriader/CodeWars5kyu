@@ -37,7 +37,6 @@ namespace CodeWars5kyu
 				   (dir1 == "EAST" && dir2 == "WEST") ||
 				   (dir1 == "WEST" && dir2 == "EAST");
 		}
-
 	}
 }
 //https://www.codewars.com/kata/550f22f4d758534c1100025a/train/csharp
