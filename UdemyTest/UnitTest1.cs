@@ -11,6 +11,15 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void PlayWithTwoStringsTest()
+				{
+					Assert.AreEqual("abcDEfgDEFGg", new PlayWithTwoStringsTask().WorkOnStrings("abcdeFg", "defgG"));
+					Assert.AreEqual("abcDeFGtrzWDEFGgGFhjkWqE", new PlayWithTwoStringsTask().WorkOnStrings("abcdeFgtrzw", "defgGgfhjkwqe"));
+					Assert.AreEqual("ABABbababa", new PlayWithTwoStringsTask().WorkOnStrings("abab", "bababa"));
+					Assert.AreEqual("abCCde", new PlayWithTwoStringsTask().WorkOnStrings("abc", "cde"));
+				}
+
+				[Test]
 				public void DirectionsReductionTest()
 				{
 					string[] a = new string[] { "NORTH", "WEST", "SOUTH", "EAST" };
