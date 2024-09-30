@@ -11,6 +11,20 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public static void BuddyPairsTest()
+				{
+					static void testing(long start, long limit, string expected)
+					{
+						Console.WriteLine("start: {0}, limit: {1}, expected: {2}", start, limit, expected);
+						Assert.AreEqual(expected, BuddyPairsTask.Buddy(start, limit));
+					}
+
+					testing(1071625, 1103735, "(1081184 1331967)");
+					testing(2382, 3679, "Nothing");
+					testing(8983, 13355, "(9504 20735)");
+				}
+
+				[Test]
 				public void PlayWithTwoStringsTest()
 				{
 					Assert.AreEqual("abcDEfgDEFGg", new PlayWithTwoStringsTask().WorkOnStrings("abcdeFg", "defgG"));
