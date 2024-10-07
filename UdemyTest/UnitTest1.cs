@@ -11,6 +11,22 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void BestTravelTest()
+				{
+					List<int> ts = new List<int> { 50, 55, 56, 57, 58 };
+					int? n = BestTravelTask.ChooseBestSum(163, 3, ts);
+					Assert.AreEqual(163, n);
+
+					ts = new List<int> { 50 };
+					n = BestTravelTask.ChooseBestSum(163, 3, ts);
+					Assert.AreEqual(null, n);
+
+					ts = new List<int> { 91, 74, 73, 85, 73, 81, 87 };
+					n = BestTravelTask.ChooseBestSum(230, 3, ts);
+					Assert.AreEqual(228, n);
+				}
+
+				[Test]
 				public static void BuddyPairsTest()
 				{
 					static void testing(long start, long limit, string expected)
