@@ -11,6 +11,22 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void BirdMountainTest()
+				{
+					char[][] mountain =
+					{
+			"^^^^^^        ".ToCharArray(),
+			" ^^^^^^^^     ".ToCharArray(),
+			"  ^^^^^^^     ".ToCharArray(),
+			"  ^^^^^       ".ToCharArray(),
+			"  ^^^^^^^^^^^ ".ToCharArray(),
+			"  ^^^^^^      ".ToCharArray(),
+			"  ^^^^        ".ToCharArray()
+		};
+					Assert.AreEqual(3, BirdMountainTask.PeakHeight(mountain));
+				}
+
+				[Test]
 				public void BestTravelTest()
 				{
 					List<int> ts = new List<int> { 50, 55, 56, 57, 58 };
