@@ -10,6 +10,31 @@ namespace UdemyTest
         {
             class Test
             {
+
+				[Test]
+				public void BasicTest()
+				{
+					void DoTest(string battlefield, string expected)
+					{
+						string actual = AlphabetWarsNuclearStrikeTask.AlphabetWar(battlefield);
+						Assert.AreEqual(expected, actual, $"For Battlefield: \"{battlefield}\"");
+					}
+
+					DoTest("#[a]#[b]#", "");
+					DoTest("[a]##[b]", "");
+					DoTest("[a]a[b]", "aab");
+					DoTest("abde[fgh]ijk", "abdefghijk");
+					DoTest("ab#de[fgh]ijk", "fgh");
+					DoTest("ab#de[fgh]ij#k", "");
+					DoTest("##abde[fgh]ijk", "");
+					DoTest("##abde[fgh]", "");
+					DoTest("abde[fgh]", "abdefgh");
+					DoTest("##abde[fgh]ijk[mn]op", "mn");
+					DoTest("#abde[fgh]i#jk[mn]op", "mn");
+					DoTest("[ab]adfd[dd]##[abe]dedf[ijk]d#d[h]#", "abijk");
+				}
+
+
 				[Test]
 				public void BirdMountainTest()
 				{
