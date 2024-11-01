@@ -10,6 +10,13 @@ namespace UdemyTest
         {
             class Test
             {
+				[Test]
+				public void FirstVariationOnCaesarCipherTest()
+				{
+					string u = "I should have known that you would have a perfect answer for me!!!";
+					Assert.AreEqual(u, FirstVariationOnCaesarCipherTask.DemovingShift(FirstVariationOnCaesarCipherTask.MovingShift(u, 1), 1));
+				}
+
 
 				[Test]
 				public void BasicTest()
