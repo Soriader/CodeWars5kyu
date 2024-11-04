@@ -10,6 +10,7 @@ namespace UdemyTest
         {
             class Test
             {
+
 				[Test]
 				public void FirstVariationOnCaesarCipherTest()
 				{
