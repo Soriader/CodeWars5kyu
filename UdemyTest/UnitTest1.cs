@@ -10,6 +10,16 @@ namespace UdemyTest
         {
             class Test
             {
+				[Test]
+				public void BasicDeNicoTest()
+				{
+					Assert.AreEqual("secretinformation", BasicDeNicoTask.DeNico("crazy", "cseerntiofarmit on  "));
+					Assert.AreEqual("secretinformation", BasicDeNicoTask.DeNico("crazy", "cseerntiofarmit on"));
+					Assert.AreEqual("abcd", BasicDeNicoTask.DeNico("abc", "abcd"));
+					Assert.AreEqual("1234567890", BasicDeNicoTask.DeNico("ba", "2143658709"));
+					Assert.AreEqual("message", BasicDeNicoTask.DeNico("a", "message"));
+					Assert.AreEqual("key", BasicDeNicoTask.DeNico("key", "eky"));
+				}
 
 				[Test]
 				public void FirstVariationOnCaesarCipherTest()
