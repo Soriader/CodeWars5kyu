@@ -11,6 +11,18 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void WololooooooPriestsJoinTheWarTest()
+				{
+					//Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("z"));
+					//Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("tz"));
+					//Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("jz"));
+					//Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("zt"));
+					Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("tzj"));
+					Assert.AreEqual("Let's fight again!", WololooooooPriestsJoinTheWarTask.AlphabetWar("zdqmwpbs"));
+					Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("ztztztzs"));
+				}
+
+				[Test]
 				public void BasicDeNicoTest()
 				{
 					Assert.AreEqual("secretinformation", BasicDeNicoTask.DeNico("crazy", "cseerntiofarmit on  "));
