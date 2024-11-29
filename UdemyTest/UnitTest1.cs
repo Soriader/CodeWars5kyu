@@ -11,12 +11,25 @@ namespace UdemyTest
             class Test
             {
 				[Test]
+				public void SecondVariationOnCaesarCipherTest()
+				{
+					string u = "I should have known that you would have a perfect answer for me!!!";
+					Assert.AreEqual(u, SecondVariationOnCaesarCipherTask.decode(SecondVariationOnCaesarCipherTask.encodeStr(u, 1)));
+
+					string x = "O CAPTAIN! my Captain! our fearful trip is done;";
+					List<string> v = new List<string> { "opP DBQUBJ", "O! nz Dbqu", "bjo! pvs g", "fbsgvm usj", "q jt epof;" };
+					Assert.AreEqual(x, SecondVariationOnCaesarCipherTask.decode(v));
+
+
+				}
+
+				[Test]
 				public void WololooooooPriestsJoinTheWarTest()
 				{
-					//Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("z"));
-					//Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("tz"));
-					//Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("jz"));
-					//Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("zt"));
+					Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("z"));
+					Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("tz"));
+					Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("jz"));
+					Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("zt"));
 					Assert.AreEqual("Right side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("tzj"));
 					Assert.AreEqual("Let's fight again!", WololooooooPriestsJoinTheWarTask.AlphabetWar("zdqmwpbs"));
 					Assert.AreEqual("Left side wins!", WololooooooPriestsJoinTheWarTask.AlphabetWar("ztztztzs"));
