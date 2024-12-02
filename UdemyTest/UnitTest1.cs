@@ -10,6 +10,33 @@ namespace UdemyTest
         {
             class Test
             {
+
+				[Test]
+				public static void MatchingAndSubstitutingTest()
+				{
+					static void dotest(string s, string prog, string version, string exp)
+					{
+						Console.Write("s:\n" + s + "\n");
+						Console.Write("prog: " + prog + "\n");
+						Console.Write("version: " + version + "\n");
+						string ans = MatchingAndSubstitutingTask.Change(s, prog, version);
+						Console.Write("ACTUAL:\n" + ans + "\n");
+						Console.Write("EXPECT:\n" + exp + "\n");
+						Console.Write("{0:D}\n", exp == ans);
+						Assert.AreEqual(exp, ans);
+						Console.WriteLine("-");
+					}
+
+					String s1 = "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0091\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha";
+					dotest(s1, "Ladder", "1.1", "Program: Ladder Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: 1.1");
+					String s12 = "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-009\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha";
+					dotest(s12, "Ladder", "1.1", "ERROR: VERSION or PHONE");
+					String s13 = "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0090\nDate: Tues April 9, 2005\nVersion: 67\nLevel: Alpha";
+					dotest(s13, "Ladder", "1.1", "ERROR: VERSION or PHONE");
+
+				}
+
+
 				[Test]
 				public void SecondVariationOnCaesarCipherTest()
 				{
