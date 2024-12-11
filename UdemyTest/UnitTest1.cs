@@ -10,6 +10,18 @@ namespace UdemyTest
         {
             class Test
             {
+				[Test]
+				public void PokerCardsTest()
+				{
+					Assert.AreEqual(new[] { 7, 22, 51 }, PokerCardsTask.Encode(new[] { "Td", "8c", "Ks" }));
+					Assert.AreEqual(new[] { 13, 30, 37 }, PokerCardsTask.Encode(new[] { "Qh", "5h", "Ad" }));
+					Assert.AreEqual(new[] { 7, 22, 51 }, PokerCardsTask.Encode(new[] { "8c", "Ks", "Td" }));
+					Assert.AreEqual(new[] { 13, 30, 37 }, PokerCardsTask.Encode(new[] { "Qh", "Ad", "5h" }));
+					Assert.AreEqual(new[] { "8c", "Td", "Ks" }, PokerCardsTask.Decode(new[] { 7, 22, 51 }));
+					Assert.AreEqual(new[] { "Ad", "5h", "Qh" }, PokerCardsTask.Decode(new[] { 13, 30, 37 }));
+					Assert.AreEqual(new[] { "8c", "Td", "Ks" }, PokerCardsTask.Decode(new[] { 7, 51, 22 }));
+					Assert.AreEqual(new[] { "Ad", "5h", "Qh" }, PokerCardsTask.Decode(new[] { 13, 37, 30 }));
+				}
 
 				[Test]
 				public static void MatchingAndSubstitutingTest()
