@@ -1,4 +1,5 @@
 using CodeWars5kyu;
+using NUnit.Framework.Internal;
 using System.Text;
 
 namespace UdemyTest
@@ -472,6 +473,45 @@ namespace UdemyTest
 
 
                 }
+            }
+
+        }
+
+        [TestFixture]
+        class SnakesAndLaddersTestClass
+        {
+            private SnakesAndLaddersTask test = new SnakesAndLaddersTask();
+
+            [TestCase]
+            [Order(1)]
+            public void BasicTest1()
+            {
+                string result = test.Play(1, 1);
+                Assert.That(result, Is.EqualTo("Player 1 is on square 38"), "Should return: 'Player 1 is on square 38'");
+            }
+
+            [TestCase]
+            [Order(2)]
+            public void BasicTest2()
+            {
+                string result = test.Play(1, 5);
+                Assert.That(result, Is.EqualTo("Player 1 is on square 44"), "Should return: 'Player 1 is on square 44'");
+            }
+
+            [TestCase]
+            [Order(3)]
+            public void BasicTest3()
+            {
+                string result = test.Play(6, 2);
+                Assert.That(result, Is.EqualTo("Player 2 is on square 31"), "Should return: 'Player 2 is on square 31'");
+            }
+
+            [TestCase]
+            [Order(4)]
+            public void BasicTest4()
+            {
+                string result = test.Play(1, 1);
+                Assert.That(result, Is.EqualTo("Player 1 is on square 25"), "Should return: 'Player 1 is on square 25'");
             }
         }
     }
