@@ -12,6 +12,16 @@ namespace UdemyTest
             class Test
             {
                 [Test]
+                public void BasicNicoVariationTest()
+                {
+                    Assert.That(BasicNicoVariationTask.Nico("crazy", "secretinformation"), Is.EqualTo("cseerntiofarmit on  "));
+                    Assert.That(BasicNicoVariationTask.Nico("abc", "abcd"), Is.EqualTo("abcd  "));
+                    Assert.That(BasicNicoVariationTask.Nico("ba", "1234567890"), Is.EqualTo("2143658709"));
+                    Assert.That(BasicNicoVariationTask.Nico("a", "message"), Is.EqualTo("message"));
+                    Assert.That(BasicNicoVariationTask.Nico("key", "key"), Is.EqualTo("eky"));
+                }
+
+                [Test]
                 public void BestMatchEgyptTeamTest()
                 {
                     var kata = new BestMatchEgyptTeamTask();
