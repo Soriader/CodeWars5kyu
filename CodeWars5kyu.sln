@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars5kyu", "CodeWars5kyu\CodeWars5kyu.csproj", "{32504764-8257-48D9-B4F3-306D3B79B094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyTest", "UdemyTest\UdemyTest.csproj", "{2DF6C068-59F5-4D5E-97D8-BA1EB8766FEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars5kyuTest", "CodeWars5kyuTest\CodeWars5kyuTest.csproj", "{2DF6C068-59F5-4D5E-97D8-BA1EB8766FEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

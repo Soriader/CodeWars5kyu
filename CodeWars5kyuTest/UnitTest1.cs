@@ -2,7 +2,7 @@ using CodeWars5kyu;
 using NUnit.Framework.Internal;
 using System.Text;
 
-namespace UdemyTest
+namespace CodeWars5kyuTest
 {
     public class Tests
     {

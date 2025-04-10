@@ -1,4 +1,4 @@
-﻿namespace UdemyTest;
+﻿namespace CodeWars5kyuTest;
 
 using CodeWars5kyu;
 

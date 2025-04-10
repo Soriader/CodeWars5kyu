@@ -1,6 +1,6 @@
 ﻿using CodeWars5kyu;
 
-namespace UdemyTest;
+namespace CodeWars5kyuTest;
 
 public class SunkDamagedOrNotTouched
 {
